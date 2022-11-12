@@ -31,3 +31,8 @@ window.onload = function () {
         speech.stop();
     })
 }
+
+clear = document.querySelector('.clear')
+clear.addEventListener('click', () => {
+    
+})

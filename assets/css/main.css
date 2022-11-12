@@ -995,12 +995,13 @@ h6 {
 
 
 
-.btn-start, .btn-end{
+.btn-start, .btn-end, .clear{
   border-radius:50px;
   text-indent: -100em;
   width:50px;
   border:none;
   box-shadow:0px 0px 0px 5px white;
+  font-family: 'Century Gothic, Courier New', Courier, monospace;
 
 }
 
