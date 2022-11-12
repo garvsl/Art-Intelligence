@@ -616,9 +616,11 @@ h6 {
 # About Section
 --------------------------------------------------------------*/
 .about .content h2 {
+  display:flex;
   font-weight: 700;
   font-size: 24px;
   color: var(--color-primary);
+  justify-content: center;
 }
 
 .about .content ul {
