@@ -34,6 +34,14 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+    <style>
+        .output{
+          display:block;
+          width:80%;
+          height:400px;
+          margin: 50px auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -86,9 +94,12 @@
       <div class="page-header d-flex align-items-center">
         <div class="container position-relative">
           <div class="row d-flex justify-content-center">
-            <div class="col-lg-6 text-center">
-              <h2>Click to start recording</h2>
-
+            <div class="col-lg-6 text-center record">
+              <h2 id="tilt">Voice your creativity</h2>
+              <button class="btn-start">start recording</button>
+              <button class="btn-end">end recording</button>
+              <textarea class="output" ></textarea>
+              
             </div>
           </div>
         </div>
@@ -113,6 +124,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="started.js"></script>
 
 </body>
 

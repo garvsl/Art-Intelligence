@@ -57,3 +57,11 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+
+pres = document.querySelector('pres');
+console.log(pres)
+pres.addEventListener('click', ()=>{
+    pres.style.boxShadow = '0px 0px 0px 35px rgb(255, 46, 46)'
+    console.log('hi')
+})
