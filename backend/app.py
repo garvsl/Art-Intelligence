@@ -37,7 +37,8 @@ def list_estuary_data(limit=50, offset=0):
 
     img_urls = []
     for elem in resp:
-        img_urls.append(os.getenv('ESTUARY_API_URL') + f'gw/ipfs/{elem["cid"]["/"]}')
+        if elem['cid'] is not None:
+            img_urls.append(os.getenv('ESTUARY_API_URL') + f'gw/ipfs/{elem["cid"]["/"]}')
 
     return img_urls
 
