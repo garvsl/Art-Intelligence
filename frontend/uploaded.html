@@ -61,7 +61,7 @@
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/about">About</a></li>
-          <li><a href="/get-started" class="active">Get Started</a></li>
+          <li><a href="/get-started">Get Started</a></li>
         </ul>
       </nav><!-- .navbar -->
 
@@ -84,14 +84,8 @@
         <div class="container position-relative">
           <div class="row d-flex justify-content-center">
             <div class="col-lg-6 text-center record">
-              <h2 id="tilt">Voice your creativity</h2>
-              <button class="btn-start">start recording</button>
-              <button class="btn-end">end recording</button>
-              <form method="post" action="/upload">
-                <textarea class="output" name="prompt"></textarea>
-                <input type="text" name="name" placeholder="Your name">
-                <input type="submit" value="Generate Art">
-              </form>
+              <h2 id="tilt">Your generated art</h2>
+              <img src="{{value}}">
             </div>
           </div>
         </div>

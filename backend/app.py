@@ -1,5 +1,5 @@
 import json
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from dotenv import load_dotenv
 import os
 import openai
@@ -65,7 +65,16 @@ def upload_to_estuary(gen_img_url):
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    img_urls = list_estuary_data()
+    images = os.listdir('../frontend/assets/images/')
+    img_urls = [f'assets/images/{img}' for img in images]
+
+    return render_template('index.html', value=img_urls)
+
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
 
 @app.route('/get-started')
@@ -74,17 +83,18 @@ def get_started():
 
 
 @app.route('/upload', methods=['POST'])
-def add(name, prompt):
+def upload():
+    prompt = request.form['prompt']
+    name = request.form['name']
+
     gen_img_url = generate_image(prompt)
     resp = upload_to_estuary(gen_img_url)
 
-    if resp is not False:
-        pass
+    if resp is False:
+        return 'ERROR: Upload to Estuary did not work'
 
-    return 'upload'
+    return render_template('uploaded.html', value=resp)
 
 
 if __name__ == '__main__':
-    # list_estuary_data()
-    # exit()
     app.run()
