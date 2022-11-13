@@ -21,7 +21,8 @@ class SpeechRecognitionApi{
 
 window.onload = function () {
     var speech = new SpeechRecognitionApi({
-        output: document.querySelector('.output')
+        //output: document.querySelector('.output')
+        output: document.getElementById('prompt')
     })
 
     document.querySelector('.btn-start').addEventListener('click', () => {
